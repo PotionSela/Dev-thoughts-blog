@@ -11,3 +11,12 @@ Dev-Thoughts-Blog is a CMS-style tech blog built using the MVC paradigm. It prov
 - [Contribution Guidelines](#contribution-guidelines)
 - [License](#license)
 - [Questions](#questions)
+
+## Description
+A description will go here!
+
+
+### Screenshots
+**Screenshots of application:**
+![example-1](./example-goes-here)
+![example-2](./example-goes-here)
