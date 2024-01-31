@@ -7,7 +7,7 @@ Dev-Thoughts-Blog is a CMS-style tech blog built using the MVC paradigm. It prov
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Features](#features)
-- [Usage Information](#usage-information)
+- [Deployment](#deployment)
 - [Contribution Guidelines](#contribution-guidelines)
 - [License](#license)
 - [Questions](#questions)
@@ -44,8 +44,8 @@ OR
 **Persistent Storage:** All notes are saved and retrieved from a JSON database.
 
 
-## Usage Information
-To run this application, use the command line to navigate to the directory of the application, install all dependencies (`npm i`), then type the command `node index.js`. You will then be taken through a series of questions. Once you've done X you can then do X.
+## Deployment
+If you want to checkout the live site, you can do that by clicking [here!](https://livesiteexample)
 
 
 ## Contribution Guidelines
