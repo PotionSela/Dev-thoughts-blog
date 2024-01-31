@@ -4,6 +4,7 @@ const sequelize = require('../config/connection');
 // Create a new Sequelize model
 class Post extends Model {}
 
+// Post Table Model
 Post.init(
   {
     id: {
@@ -43,4 +44,5 @@ Post.init(
   }
 );
 
+// Export link
 module.exports = Post;
