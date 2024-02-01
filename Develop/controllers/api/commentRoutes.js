@@ -17,3 +17,25 @@ router.post("/", async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+// Read all the comments
+router.get("/", async (req, res) => {
+    try {
+        const commentData = await Comment.findAll({
+            include: [
+                {
+                    model: User,
+                    attributes: ["name"],
+                },
+                {
+                    model: Post,
+                    attributes: ["id"],
+                },
+            ],
+        });
+        res.status(200).json(commentData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
