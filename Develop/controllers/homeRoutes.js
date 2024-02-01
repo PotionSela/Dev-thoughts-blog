@@ -108,3 +108,38 @@ router.get("/create", async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+// Route to set up to be able to edit an existing post
+router.get("/create/:id", async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id, {
+            // Join the user data and comment data with the post data
+            include: [
+                {
+                    model: User,
+                    attributes: ["name"],
+                },
+                {
+                    model: Comment,
+                    include: [User],
+                },
+            ],
+        });
+        const post = postData.get({ plain: true });
+        console.log(post);
+
+        if (req.session.logged_in) {
+            res.render("edit", {
+                ...post,
+                logged_in: req.session.logged_in,
+                userId: req.session.user_id,
+            });
+            return;
+        } else {
+            res.redirect("/login");
+        }
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
