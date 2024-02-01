@@ -91,3 +91,20 @@ router.get("/dashboard", withAuth, async (req, res) => {
     }
 });
 
+// For new post = renders 'create.handlebars' and redirects to /login if not logged in
+router.get("/create", async (req, res) => {
+    try {
+        if (req.session.logged_in) {
+            res.render("create", {
+                logged_in: req.session.logged_in,
+                userId: req.session.user_id,
+            });
+            return;
+        } else {
+            res.redirect("/login");
+        }
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
