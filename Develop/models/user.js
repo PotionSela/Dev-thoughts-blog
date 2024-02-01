@@ -1,6 +1,6 @@
 // Imports
 const { Model, DataTypes} = require("sequelize");
-const sequelize = require("../congig/connection");
+const sequelize = require("../config/connection");
 const bcrypt = require("bcrypt");
 
 class User extends Model {
@@ -24,7 +24,7 @@ User.init (
             allowNull: false,
         },
         email: {
-            type: DataType.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
             unique: true,
             validate: {
