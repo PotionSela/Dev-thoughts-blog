@@ -1,6 +1,6 @@
 let post = window.location.pathname.split("/");
 
-// Function created allowing user to edit blog posts from the individual post page
+// Function created allowing user to edit posts from the individual post page
 const editPost = async (event) => {
     event.preventDefault();
     console.log("clicked me, teehee");
