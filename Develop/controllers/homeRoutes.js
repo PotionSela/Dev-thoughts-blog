@@ -33,3 +33,31 @@ router.get("/", async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+// Get a single post
+router.get("/post/:id", withAuth, async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id, {
+            // Join user data and comment data with blog post data
+            include: [
+                {
+                    model: User,
+                    attributes: ["name"],
+                },
+                {
+                    model: Comment,
+                    include: [User],
+                },
+            ],
+        });
+        const post = postData.get({ plain: true });
+        console.log(post);
+        res.render("post", {
+            ...post,
+            logged_in: req.session.logged_in,
+        });
+    } catch (err) {
+        res.status(500).json(err);
+        res.redirect("/login");
+    }
+});
