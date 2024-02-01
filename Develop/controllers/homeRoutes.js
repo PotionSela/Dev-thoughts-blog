@@ -143,3 +143,15 @@ router.get("/create/:id", async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+router.all("/login", (req, res) => {
+    // If user is logged in already, redirect the request to another route
+    if ( req.session.logged_in ) {
+        res.redirect("/dashboard");
+        return;
+    }
+    res.render("login");
+});
+
+// Export
+module.exports = router;
