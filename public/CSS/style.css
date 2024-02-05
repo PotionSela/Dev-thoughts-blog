@@ -1,29 +1,29 @@
 /* General page styles */
 
-header {
+/* header {
     font-family: "Jomolhari", serif;
-  }
+  } */
   
   body {
-    background-color: #a28089;
+    background-color: #312eca;
   }
   
   h1 {
     font-family: "Jomolhari", serif;
-    background-color: teal;
-    color: #ffb3c6;
+    background-color: #4d0080;
+    color: #c9aee7;
     padding: 16px;
     margin-bottom: 5px;
   }
   
-  #blogName {
-    color: #ffe5ec;
+  #postName {
+    color: #c9aee7;
   }
   
   main {
     font-family: "Jomolhari", serif;
     margin-top: -5px;
-    background-color: #a28089;
+    background-color: #312eca;
   }
   
   .homepage-main {
@@ -34,18 +34,18 @@ header {
     background-color: #84a59d;
   }
   
-  .blogPost-main {
+  .post-main {
     margin-top: 34px;
   }
   
   /* Nav styles */
   
   .navBar {
-    background-color: #00a0a0;
+    background-color: #9d34e4;
   }
   
   #logout {
-    background-color: #84a59d;
+    background-color: #6041d1;
   }
   
   /* Input/textarea styles */
@@ -64,25 +64,25 @@ header {
   /* Button styles */
   
   .btn {
-    background-color: #ffb3c6;
+    background-color: #9690e7;
   }
   
   /* Card styles */
   
   .card-header {
-    background-color: #e5eaf5;
+    background-color: #3b349c;
   }
   
   .card-body {
-    background-color: #ffe5ec;
+    background-color: #9a95d8;
   }
   
   .card {
-    background-color: #ffe5ec;
+    background-color: #3423ce;
   }
   
   .card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px #54127ae0;
     transform: scale(1.02);
     transition: all 0.3s ease;
   }
