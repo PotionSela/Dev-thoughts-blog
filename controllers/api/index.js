@@ -5,8 +5,8 @@ const postRoutes = require('./postRoutes');
 const commentRoutes = require('./commentRoutes');
 
 // Middleware
-router.use('/userRoutes', userRoutes);
-router.use('/postRoutes', postRoutes);
+router.use('/users', userRoutes);
+router.use('/post', postRoutes);
 router.use('/comment', commentRoutes);
 
 // Exports
