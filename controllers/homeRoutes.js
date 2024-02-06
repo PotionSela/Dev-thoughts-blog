@@ -72,7 +72,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
             // Join user blog post and comment data with user data
             include: [
                 {
-                    model: post,
+                    model: Post,
                     include: [User],
                 },
                 {
