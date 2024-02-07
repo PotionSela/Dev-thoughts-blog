@@ -19,6 +19,7 @@ Crafted for users to engage with tech industry content, this full-stack applicat
 **Screenshots of application:**
 ![login](./public/images/login-page.png)
 ![homepage](./public/images/homepage.png)
+![posts](./public/images/posts.png)
 
 
 ## Technologies Used
