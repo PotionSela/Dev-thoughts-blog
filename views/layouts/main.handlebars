@@ -19,7 +19,7 @@
     <header class="navBar">
       <nav>
         {{#if logged_in}}
-          <button class="btn btn-primary" href="/">Home</button>
+          <button class="btn btn-primary"><a href="/">Home</a></button>
           <button class="btn btn-primary" href="/dashboard">Dashboard</button>
           <button class="button" id="logout">Logout</button>
         {{else}}
@@ -39,5 +39,8 @@
     </main>
 
   </body>
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 
 </html>

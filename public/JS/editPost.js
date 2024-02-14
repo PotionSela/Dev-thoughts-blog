@@ -6,7 +6,7 @@ const editPost = async (event) => {
     console.log("clicked me, teehee");
 
     // get text and trim whitespace
-    const comment_body = document.getElementById("editBtn").ariaValueMax.trim();
+    const comment_body = document.getElementById("editBtn").value.trim();
     console.log(post);
     document.location.assign(`/create/${post[2]}`);
 };
@@ -15,5 +15,5 @@ const editButton = document.querySelectorAll("#editBtn");
 
 // Iterates over all buttons on the page allowing for edit functionality
 for (let i = 0; i < editButton.length; i ++) {
-    editButton[1].addEventListener("click", editPost);
+    editButton[i].addEventListener("click", editPost);
 }
