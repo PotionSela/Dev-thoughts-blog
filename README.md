@@ -57,7 +57,7 @@ From there, you can utilize applications such as Insomnia to test the functional
 
 
 ## Deployment
-If you want to checkout the live site, you can do that by clicking [here!](https://livesiteexample)
+If you want to checkout the live site, you can do that by clicking [here!](https://dev-thoughts-blog-2fbafcb43f14.herokuapp.com/)
 
 
 ## Contribution Guidelines
